@@ -1,0 +1,36 @@
+﻿@model List<Movie>
+
+<form asp-method="post" asp-action="MovieNightResults">
+    <h4>Search Movie:</h4>
+    <input type="text" name="title1" />
+    <h4>Search Movie:</h4>
+    <input type="text" name="title2" />
+    <h4>Search Movie:</h4>
+    <input type="text" name="title3" />
+    <input type="submit" />
+</form>
+
+<br />
+
+@{
+    if (Model != null)
+    {
+        foreach(Movie m in Model)
+        {
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="@m.Poster" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title">@m.Title</h4>
+                            <p class="card-text">@m.Plot</p>
+                            <p class="card-text">@m.Genre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+}
