@@ -1,12 +1,8 @@
-﻿<h1 style="text-align:center">It's Movie Time!</h1>
-
-<div class="container d-flex align-items-center justify-content-center">
-    <div class="text-center">
-        <br />
-        <br />
-        <div class="container mt-4">
-            <a class="btn btn-primary mr-2" asp-action="MovieSearchForm">Movie Search Form</a>
-            <a class="btn btn-success" asp-action="MovieNightForm">Movie Night Form</a>
-        </div>
-    </div>
+﻿<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to OMDB Movie Search</h1>
+    <p class="lead">Search for your favorite movies and create a movie night list.</p>
+    <hr class="my-4">
+    <p>You can search for a single movie or create a list of three movies for a movie night.</p>
+    <a class="btn btn-primary btn-lg" asp-action="MovieSearchForm" role="button">Movie Search</a>
+    <a class="btn btn-success btn-lg" asp-action="MovieNightForm" role="button">Movie Night</a>
 </div>

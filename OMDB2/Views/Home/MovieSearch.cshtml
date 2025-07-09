@@ -1,10 +1,14 @@
 ﻿@model Movie
 
-<form asp-method="post" asp-action="MovieSearchResults">
-    <h4>Search for a movie title here</h4>
-    <input type="text" name="title" />
-    <input type="submit" />
-</form>
+<div class="container">
+    <form asp-method="post" asp-action="MovieSearchResults" class="my-4">
+        <h4>Search for a movie title here</h4>
+        <div class="form-group col-md-6">
+            <input type="text" name="title" class="form-control" placeholder="Enter movie title" />
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
 
 <br />
 
@@ -21,6 +25,7 @@
                         <h4 class="card-title">@Model.Title</h4>
                         <p class="card-text">@Model.Plot</p>
                         <p class="card-text">@Model.Genre</p>
+                        <p class="card-text">@Model.Year</p>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,22 @@
 ﻿@model List<Movie>
 
-<form asp-method="post" asp-action="MovieNightResults">
-    <h4>Search Movie:</h4>
-    <input type="text" name="title1" />
-    <h4>Search Movie:</h4>
-    <input type="text" name="title2" />
-    <h4>Search Movie:</h4>
-    <input type="text" name="title3" />
-    <input type="submit" />
-</form>
+<div class="container">
+    <form asp-method="post" asp-action="MovieNightResults" class="my-4">
+        <div class="form-group col-md-6">
+            <h4>Search Movie:</h4>
+            <input type="text" name="title1" class="form-control" placeholder="Enter movie title 1" />
+        </div>
+        <div class="form-group col-md-6">
+            <h4>Search Movie:</h4>
+            <input type="text" name="title2" class="form-control" placeholder="Enter movie title 2" />
+        </div>
+        <div class="form-group col-md-6">
+            <h4>Search Movie:</h4>
+            <input type="text" name="title3" class="form-control" placeholder="Enter movie title 3" />
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
 
 <br />
 
@@ -27,6 +35,7 @@
                             <h4 class="card-title">@m.Title</h4>
                             <p class="card-text">@m.Plot</p>
                             <p class="card-text">@m.Genre</p>
+                            <p class="card-text">@m.Year</p>
                         </div>
                     </div>
                 </div>
