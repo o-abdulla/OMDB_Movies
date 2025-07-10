@@ -18,7 +18,7 @@
         public string Awards { get; set; }
         public Uri Poster { get; set; }
         public List<Rating> Ratings { get; set; }
-        public long Metascore { get; set; }
+        public string Metascore { get; set; }
         public string ImdbRating { get; set; }
         public string ImdbVotes { get; set; }
         public string ImdbId { get; set; }
